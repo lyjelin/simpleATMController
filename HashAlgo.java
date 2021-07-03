@@ -1,5 +1,4 @@
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import java.security.*;
 
 public class HashAlgo implements Hashing {
 

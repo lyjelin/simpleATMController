@@ -1,21 +1,18 @@
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
 
 public class authPinNum extends HashAlgo {
 
     public authPinNum() {}
 
-    public void authFunc(BufferedReader input, User u) throws IOException, NoSuchAlgorithmException {
-        System.out.println("Please insert your card: "); 
-        String cardNumber = input.readLine();
-        
+    public boolean authFunc(BufferedReader input, User u, String cardNumber) throws IOException, NoSuchAlgorithmException {
+    
         System.out.println("Please enter your pin number: ");
         String pinNumber = input.readLine();
 
         if (checkUserExistance(u, pinNumber) == false){
             System.out.print("Unregistered Card!");
-            return;
+            return false;
         }
         else{
 
@@ -24,7 +21,7 @@ public class authPinNum extends HashAlgo {
 
             if (u.checkAccStatus(cardHolderName) == false){
                 System.out.println("Access Failed! Your account has been locked!");
-                return;
+                return false;
             }
             else {
                 String hpin = hashedPin(pinNumber);
@@ -39,12 +36,12 @@ public class authPinNum extends HashAlgo {
                     }
 
                     System.out.println("Authentication Fail; Invalid pin number!");
-                    return;
+                    return false;
                 }
                 else {
                     System.out.println("Authentication Success! Hello "+cardHolderName+"!");
                     u.resetCount(u.getUserIndex(cardHolderName));
-                    return;
+                    return true;
                 }
             }
         }

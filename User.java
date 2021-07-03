@@ -37,6 +37,10 @@ public class User {
         return name.indexOf(cardHolderName);
     }
 
+    public int getUserIndexByCardNum(String cardNum)  {
+        return name.indexOf(cardNum);
+    }
+
     // cardNum handlings
     public void addCardNum(String cardNumber) {
         cardNum.add(cardNumber);
