@@ -14,8 +14,7 @@ public class importClientInfo extends HashAlgo {
 
         String clientInfo;
 
-        while ((clientInfo = br.readLine())!=null){
-            System.out.println(clientInfo);
+        while ((clientInfo = br.readLine())!=null){      
             String[] tempArray = clientInfo.split(";");
 
             ArrayList<String> acc = new ArrayList<String>();

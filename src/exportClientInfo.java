@@ -41,9 +41,11 @@ public class exportClientInfo {
             }
             clientInfo += ";"+u.getLoginStatus(i)+";"+u.getLoginFailCountByIndex(i)+"\n";
             dbout += clientInfo;
+            
+            
         }
 
-        dbFile.println(dbout);
+        dbFile.print(dbout.substring(0, dbout.length() - 1));
         dbFile.close();
 
 
