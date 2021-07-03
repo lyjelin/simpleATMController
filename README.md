@@ -1,7 +1,7 @@
 # simpleATMController
 Implementing a Simple ATM Controller
 
-### Requirements
+## Requirements
 
 1. Insert Card 
 2. Enter PIN number  
@@ -14,7 +14,7 @@ Thus account balance can be represented in integer.
 
 ---
 
-### Getting Started with : 
+## Getting Started with : 
 
 1. Insert Card as **Enter Card Number** (6-digit i.e. 000000)
 2. Enter Pin number (4-digit i.e.2017)
@@ -29,3 +29,47 @@ Thus account balance can be represented in integer.
     [4] Exit
     ```
 7. Client can only exit ATM service and terminate by selecting [4]
+
+---
+## Functions
+
+### ATM
+
+- Main
+
+### authPinNum
+
+Authentication function
+- Check whether client's card status is valid
+- Check if input pin number is correct 
+- Allow 3 login chances 
+
+### Hashing && HashAlgo
+
+- Hashing creates hashing interface
+- Hash client's input (= pin number) for the authentication
+
+### checkBalance
+
+- Allow client to check balance of selected account
+
+### Deposit
+
+- Allow client to add in cash into selected account
+
+### Withdrawal
+
+- Allow client to withdraw cash from selected account
+
+### Service
+
+
+### User
+
+- Client Database 
+- Stores client name, card number, accounts' num/balance, login status, login fail count(s)
+
+### addRegisteredUser
+
+- Allow client database to store some client info
+- Provide test-case environment
