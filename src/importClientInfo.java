@@ -18,7 +18,6 @@ public class importClientInfo extends HashAlgo {
             System.out.println(clientInfo);
             String[] tempArray = clientInfo.split(";");
 
-
             ArrayList<String> acc = new ArrayList<String>();
             ArrayList<Integer> accBalance= new ArrayList<Integer>();
 

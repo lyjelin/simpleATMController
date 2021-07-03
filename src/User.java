@@ -68,10 +68,6 @@ public class User {
         return normPin.get(name.indexOf(cardHolderName));
     }
 
-    public int normPinArraySize() {
-        return normPin.size();
-    }
-
     public int getnormPinIndex(String cardNumber)  {
         return normPin.indexOf(cardNumber);
     }

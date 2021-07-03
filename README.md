@@ -26,7 +26,7 @@ Clones ATM respiratory to local
 
 Assuming that your visual code has Java extentions, click `Run` button that you can see in `ATM.java` file
 
-![runBtn](/img/runButton.png);
+<img src="/img/runButton.png" alt="runBtn" width="50%"/>
 
 1. Insert Card as **Enter Card Number** (6-digit i.e. 000000)
 2. Enter Pin number (4-digit i.e.2017)
