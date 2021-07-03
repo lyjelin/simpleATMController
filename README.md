@@ -39,20 +39,15 @@ Assuming that your visual code has Java extentions, click `Run` button that you 
 5. Client can select account from list of Accounts
 <img src="/img/selectAcc.png" alt="selectAcc" width="50%"/>
 6. After selection, the transaction screen will be coming out. Client can :
-    ```
-    [1] Check Balance
-    [2] Cash Deposit
-    [3] Cash Withdrawal
-    [4] Exit
-    ```
-    **Check Balance**
-    <img src="/img/showBalance.png" alt="showBalance" width="50%"/>
 
-    **Cash Deposit**
-    <img src="/img/cashDeposit.png" alt="deposit" width="50%"/>
+**Check Balance**
+<img src="/img/showBalance.png" alt="showBalance" width="50%"/>
 
-    **Cash Withdrawalt**
-    <img src="/img/cashWithdrawal.png" alt="withdrawal" width="50%"/>
+**Cash Deposit**
+<img src="/img/cashDeposit.png" alt="deposit" width="50%"/>
+
+**Cash Withdrawalt**
+<img src="/img/cashWithdrawal.png" alt="withdrawal" width="50%"/>
 
 7. Client can only exit ATM service and terminate by selecting [4]
 <img src="/img/exit.png" alt="exit" width="50%"/>
