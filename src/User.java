@@ -145,7 +145,8 @@ public class User {
 
     public void failCountUp(int index)  {
         int currentFailCount = loginFailCount.get(index);
-        loginFailCount.set(index, currentFailCount++);
+        currentFailCount++;
+        loginFailCount.set(index, currentFailCount);
     }
 
     public void resetCount(int index){

@@ -41,22 +41,20 @@ public class ATM {
             System.out.println("=======================");
             System.out.println("Select Account for Service");
 
-            int selectedAccIndex = -1;
             for (int i=0; i<((user.getAcc()).get(clientNum)).size();i++){
                 System.out.println(i+" : "+((user.getAcc()).get(clientNum)).get(i));
-                selectedAccIndex = i;
             }
-
-            System.out.println("");
-            System.out.println("Selected Account : "+(user.getAcc()).get(clientNum).get(selectedAccIndex));
-            System.out.println("");
 
             String clientInput = input.readLine();
             int clientAccIndex = Integer.parseInt(clientInput);
 
+            System.out.println("");
+            System.out.println("Selected Account : "+(user.getAcc()).get(clientNum).get(clientAccIndex));
+
             /**
              * Transaction Page
              */
+            System.out.println("");
             System.out.println("=======================");
             System.out.println("Select Transaction");
             System.out.println("[1] Check Balance \n[2] Cash Deposit \n[3] Cash Withdrawal \n[4] Exit");
@@ -79,9 +77,10 @@ public class ATM {
                 if (command.equals("3"))
                     withdrawal.func(input, user, clientAccIndex, clientNum);
 
+                System.out.println("");
+                System.out.println("=======================");
                 System.out.println(" Select Transaction");
-                System.out.println("---------------------");
-                System.out.println("[1] Check Balance \n[2] Cash Deposit \n[3] Cash Withdrawal");
+                System.out.println("[1] Check Balance \n[2] Cash Deposit \n[3] Cash Withdrawal \n[4] Exit");
                 System.out.println("");
                 System.out.println("Please enter your command : ");
                 command = input.readLine();
