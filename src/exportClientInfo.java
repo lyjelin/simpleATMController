@@ -5,8 +5,6 @@ public class exportClientInfo {
     public void save(User u) throws FileNotFoundException{
         PrintWriter dbFile = new PrintWriter("clientDB.txt");
 
-        System.out.println(u.nameArraySize());
-
         String dbout = "";
         String clientInfo = "";
 

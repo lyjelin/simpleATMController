@@ -22,13 +22,16 @@ public class Deposit {
                 int currentBalance = u.getAccBalance(clientNum).get(clientAccIndex);
                 u.getAccBalance(clientNum).set(clientAccIndex, currentBalance + Integer.parseInt(amount));
                 System.out.println("");
-                System.out.println(Integer.parseInt(amount)+" added into your account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
+                System.out.println("=======================");
+                System.out.println(Integer.parseInt(amount)+" added into \nyour account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
                 System.out.println("Current Balance : "+ (currentBalance + Integer.parseInt(amount)));
                 System.out.println("");
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;
             }
             else if (confirmation.equals("N") || confirmation.equals("n")){
+                System.out.println("");
+                System.out.println("=======================");
                 System.out.println("Cash Deposit Cancelled");
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;

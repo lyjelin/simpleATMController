@@ -24,7 +24,7 @@ public class Withdrawal {
                 u.getAccBalance(clientNum).set(clientAccIndex, currentBalance - Integer.parseInt(amount));
                 System.out.println("");
                 System.out.println("=======================");
-                System.out.println(Integer.parseInt(amount)+" withdrawn into your account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
+                System.out.println(Integer.parseInt(amount)+" withdrawn from \nyour account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
                 System.out.println("Current Balance : "+ (currentBalance - Integer.parseInt(amount)));
                 System.out.println("");
                 System.out.println("Returning back to Transaction Main ...");
