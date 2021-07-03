@@ -19,7 +19,7 @@ public class authPinNum extends HashAlgo {
             // If card is already registered in database 
             String cardHolderName = u.getName(u.getCardNumIndex(cardNumber));
 
-            if (u.checkAccStatus(cardHolderName) == false){
+            if (u.checkLoginStatus(cardHolderName) == false){
                 System.out.println("Access Failed! Your account has been locked!");
                 return false;
             }
@@ -32,7 +32,7 @@ public class authPinNum extends HashAlgo {
                         u.failCountUp(u.getUserIndex(cardHolderName));
                     }
                     else if (userLoginFailCount == 3){
-                        u.changeAccStatus(u.getUserIndex(cardHolderName), false);
+                        u.changeLoginStatus(u.getUserIndex(cardHolderName), false);
                     }
 
                     System.out.println("Authentication Fail; Invalid pin number!");

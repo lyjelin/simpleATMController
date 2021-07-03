@@ -52,6 +52,7 @@ public class ATM {
 
                 else if (command.equals("2"))
                     deposit.func(input, user, cardNumber);
+                    
                 else if (command.equals("3"))
                     withdrawal.func(input, user, cardNumber);
 

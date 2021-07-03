@@ -5,18 +5,18 @@ public class User {
     private ArrayList<String> name;
     private ArrayList<String> cardNum;
     private ArrayList<String> hashedPin;
-    private ArrayList<String> accNum;
-    private ArrayList<Integer> accBalance;
-    private ArrayList<Boolean> accStatus;
+    private ArrayList<ArrayList<String>> accNum;
+    private ArrayList<ArrayList<Integer>> accBalance;
+    private ArrayList<Boolean> loginStatus;
     private ArrayList<Integer> loginFailCount;
 
     public User(){
         name = new ArrayList<String>();
         cardNum = new ArrayList<String>();
         hashedPin = new ArrayList<String>();
-        accNum = new ArrayList<String>();
-        accBalance = new ArrayList<Integer>();
-        accStatus = new ArrayList<Boolean>();
+        accNum = new ArrayList<ArrayList<String>>();
+        accBalance = new ArrayList<ArrayList<Integer>>();
+        loginStatus = new ArrayList<Boolean>();
         loginFailCount = new ArrayList<Integer>();
     }
 
@@ -80,11 +80,11 @@ public class User {
     }
 
     // accNum handlings
-    public void addAccNum(String accNumber) {
-        accNum.add(accNumber);
+    public void addAccNum(ArrayList<String> accNumbers) {
+        accNum.add(accNumbers);
     }
 
-    public String getAccNum(int index) {
+    public ArrayList<String> getAccNumArray(int index) {
         return accNum.get(index);
     }
 
@@ -92,16 +92,16 @@ public class User {
         return accNum.size();
     }
 
-    public int getAccNumIndex(String accNumber)  {
-        return accNum.indexOf(accNumber);
+    public int getAccHolderIndex(ArrayList<String> acc)  {
+        return accNum.indexOf(acc);
     }
 
     // accBalance handlings
-    public void addAccBalance(int balance) {
+    public void addAccBalance(ArrayList<Integer> balance) {
         accBalance.add(balance);
     }
 
-    public int getAccBalance(int index) {
+    public ArrayList<Integer> getAccBalance(int index) {
         return accBalance.get(index);
     }
 
@@ -109,25 +109,21 @@ public class User {
         return accBalance.size();
     }
 
-    public void changeAccBalance(int index, int balance)  {
-        accBalance.set(index, balance);
+    // loginStatus handlings
+    public void addLoginStatus(boolean status) {
+        loginStatus.add(status);
     }
 
-    // accStatus handlings
-    public void addAccStatus(boolean status) {
-        accStatus.add(status);
+    public boolean checkLoginStatus(String cardHolderName) {
+        return loginStatus.get(name.indexOf(cardHolderName));
     }
 
-    public boolean checkAccStatus(String cardHolderName) {
-        return accStatus.get(name.indexOf(cardHolderName));
+    public int loginStatusArraySize() {
+        return loginStatus.size();
     }
 
-    public int accStatusArraySize() {
-        return accStatus.size();
-    }
-
-    public void changeAccStatus(int index, boolean userStatus)  {
-        accStatus.set(index, userStatus);
+    public void changeLoginStatus(int index, boolean userStatus)  {
+        loginStatus.set(index, userStatus);
     }
 
     // loginFailCount handlings
