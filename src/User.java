@@ -4,6 +4,7 @@ public class User {
     
     private ArrayList<String> name;
     private ArrayList<String> cardNum;
+    private ArrayList<String> normPin;
     private ArrayList<String> hashedPin;
     private ArrayList<ArrayList<String>> accNum;
     private ArrayList<ArrayList<Integer>> accBalance;
@@ -13,6 +14,7 @@ public class User {
     public User(){
         name = new ArrayList<String>();
         cardNum = new ArrayList<String>();
+        normPin = new ArrayList<String>();
         hashedPin = new ArrayList<String>();
         accNum = new ArrayList<ArrayList<String>>();
         accBalance = new ArrayList<ArrayList<Integer>>();
@@ -52,6 +54,30 @@ public class User {
 
     public int getCardNumIndex(String cardNumber)  {
         return cardNum.indexOf(cardNumber);
+    }
+    // normPin handlings
+    public void addnormPin(String pinNum) {
+        normPin.add(pinNum);
+    }
+
+    public String getnormPin(int index) {
+        return normPin.get(index);
+    }
+
+    public String getnormPin(String cardHolderName) {
+        return normPin.get(name.indexOf(cardHolderName));
+    }
+
+    public int normPinArraySize() {
+        return normPin.size();
+    }
+
+    public int getnormPinIndex(String cardNumber)  {
+        return normPin.indexOf(cardNumber);
+    }
+
+    public ArrayList<String> getnormPinArray(){
+        return normPin;
     }
 
     // hashedPin handlings

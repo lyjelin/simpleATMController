@@ -15,13 +15,16 @@ public class importClientInfo extends HashAlgo {
         String clientInfo;
 
         while ((clientInfo = br.readLine())!=null){
+            System.out.println(clientInfo);
             String[] tempArray = clientInfo.split(";");
+
 
             ArrayList<String> acc = new ArrayList<String>();
             ArrayList<Integer> accBalance= new ArrayList<Integer>();
 
             u.addName(tempArray[0]);
             u.addCardNum(tempArray[1]);
+            u.addnormPin(tempArray[2]);
             u.addhashedPin(hashedPin(tempArray[2]));
 
             String[] accHoldByClient = (tempArray[3]).split(",");

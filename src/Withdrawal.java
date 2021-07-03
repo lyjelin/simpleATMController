@@ -12,7 +12,7 @@ public class Withdrawal {
         String amount = input.readLine();
 
         System.out.println("");
-        System.out.println("Amount entered is : "+amount);
+        System.out.println("Amount entered : "+amount);
         System.out.println("Are you confirmed? Y/N");
 
         String confirmation = input.readLine();
@@ -21,7 +21,7 @@ public class Withdrawal {
         while(flag == true){
             if (confirmation.equals("Y") || confirmation.equals("y")){
                 int currentBalance = u.getAccBalance(clientNum).get(clientAccIndex);
-                u.getAccBalance(clientNum).set(clientAccIndex, currentBalance + Integer.parseInt(amount));
+                u.getAccBalance(clientNum).set(clientAccIndex, currentBalance - Integer.parseInt(amount));
                 System.out.println("");
                 System.out.println("=======================");
                 System.out.println(Integer.parseInt(amount)+" withdrawn into your account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");

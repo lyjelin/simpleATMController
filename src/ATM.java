@@ -10,8 +10,6 @@ public class ATM {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         
         User user = new User();
-        Deposit deposit = new Deposit();
-        Withdrawal withdrawal = new Withdrawal();
         authPinNum authentication = new authPinNum();
 
         /**
@@ -74,10 +72,10 @@ public class ATM {
                     checkBalance.func(user, clientNum, clientAccIndex);
 
                 if (command.equals("2"))
-                    deposit.func(input, user, clientAccIndex, clientNum);
+                    Deposit.func(input, user, clientAccIndex, clientNum);
 
                 if (command.equals("3"))
-                    withdrawal.func(input, user, clientAccIndex, clientNum);
+                    Withdrawal.func(input, user, clientAccIndex, clientNum);
 
                 System.out.println("");
                 System.out.println("=======================");
@@ -93,7 +91,7 @@ public class ATM {
             System.out.println("Please remember to retrieve your card");
             System.out.println("Thank you for using");
 
-            exportClientInto clientDB = new exportClientInto();
+            exportClientInfo clientDB = new exportClientInfo();
             clientDB.save(user);
 
         }
