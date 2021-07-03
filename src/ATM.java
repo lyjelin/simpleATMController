@@ -10,7 +10,6 @@ public class ATM {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         
         User user = new User();
-        checkBalance checking = new checkBalance();
         Deposit deposit = new Deposit();
         Withdrawal withdrawal = new Withdrawal();
         authPinNum authentication = new authPinNum();
@@ -42,12 +41,14 @@ public class ATM {
             System.out.println("=======================");
             System.out.println("Select Account for Service");
 
+            int selectedAccIndex = -1;
             for (int i=0; i<((user.getAcc()).get(clientNum)).size();i++){
                 System.out.println(i+" : "+((user.getAcc()).get(clientNum)).get(i));
+                selectedAccIndex = i;
             }
 
             System.out.println("");
-            System.out.println("Selected Account : "+(user.getAcc()).get(clientNum)).get(i));
+            System.out.println("Selected Account : "+(user.getAcc()).get(clientNum).get(selectedAccIndex));
             System.out.println("");
 
             String clientInput = input.readLine();
@@ -86,7 +87,7 @@ public class ATM {
                 command = input.readLine();
 
             }
-            
+
             System.out.println("");
             System.out.println("Please remember to retrieve your card");
             System.out.println("Thank you for using");

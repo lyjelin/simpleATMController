@@ -1,7 +1,7 @@
 # simpleATMController
 Implementing a Simple ATM Controller
 
-### Scenario
+### Requirements
 
 1. Insert Card 
 2. Enter PIN number  
@@ -12,6 +12,6 @@ For simplification, there are only 1 dollar bills in this world, no cents.
 
 Thus account balance can be represented in integer.
 
-----
+---
 
-Insert Card as **Enter Card Number** 
+
