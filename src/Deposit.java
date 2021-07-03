@@ -6,12 +6,12 @@ public class Deposit {
     public static void func(BufferedReader input, User u, int clientAccIndex, int clientNum) throws IOException, NoSuchAlgorithmException {
         
         System.out.println("");
-        System.out.println("Enter amount for cash deposit : ");
+        System.out.print("Enter amount for cash deposit : $ ");
 
         String amount = input.readLine();
 
         System.out.println("");
-        System.out.println("Amount entered is : "+amount);
+        System.out.println("Amount entered is : $ "+amount);
         System.out.println("Are you confirmed? Y/N");
 
         String confirmation = input.readLine();
@@ -23,8 +23,8 @@ public class Deposit {
                 u.getAccBalance(clientNum).set(clientAccIndex, currentBalance + Integer.parseInt(amount));
                 System.out.println("");
                 System.out.println("=======================");
-                System.out.println(Integer.parseInt(amount)+" added into \nyour account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
-                System.out.println("Current Balance : "+ (currentBalance + Integer.parseInt(amount)));
+                System.out.println("$ "+Integer.parseInt(amount)+" added into \nyour account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
+                System.out.println("Current Balance : $ "+ (currentBalance + Integer.parseInt(amount)));
                 System.out.println("");
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;

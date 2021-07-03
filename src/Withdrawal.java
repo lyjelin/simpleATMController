@@ -7,12 +7,12 @@ public class Withdrawal {
     public static void func(BufferedReader input, User u, int clientAccIndex, int clientNum) throws IOException, NoSuchAlgorithmException {
 
         System.out.println("");
-        System.out.println("Enter amount for cash withdrawal : ");
+        System.out.print("Enter amount for cash withdrawal : $ ");
 
         String amount = input.readLine();
 
         System.out.println("");
-        System.out.println("Amount entered : "+amount);
+        System.out.println("Amount entered $ : "+amount);
         System.out.println("Are you confirmed? Y/N");
 
         String confirmation = input.readLine();
@@ -24,8 +24,8 @@ public class Withdrawal {
                 u.getAccBalance(clientNum).set(clientAccIndex, currentBalance - Integer.parseInt(amount));
                 System.out.println("");
                 System.out.println("=======================");
-                System.out.println(Integer.parseInt(amount)+" withdrawn from \nyour account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
-                System.out.println("Current Balance : "+ (currentBalance - Integer.parseInt(amount)));
+                System.out.println("$ "+Integer.parseInt(amount)+" withdrawn from \nyour account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
+                System.out.println("Current Balance : $ "+ (currentBalance - Integer.parseInt(amount)));
                 System.out.println("");
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;

@@ -16,6 +16,18 @@ Thus account balance can be represented in integer.
 
 ## Getting Started with : 
 
+Friendly Notice : I used vscode studio to run ATM.java 
+
+`git clone https://github.com/lyjelin/simpleATMController.git`
+
+Clones ATM respiratory to local
+
+`Run`
+
+Assuming that your visual code has Java extentions, click `Run` button that you can see in `ATM.java` file
+
+![runBtn](/img/runButton.png);
+
 1. Insert Card as **Enter Card Number** (6-digit i.e. 000000)
 2. Enter Pin number (4-digit i.e.2017)
 3. If pin number is invalid, the Authentication fails. The ATM system will allow client to re-enter valid pin number for 2 more times (3 times in total). If the client fails to type in correct pin for all given chances, client's card will be locked. But if user success to enter valid pin number within given chances, the login fail count will reset to zero
@@ -61,15 +73,15 @@ Authentication function
 
 - Allow client to withdraw cash from selected account
 
-### Service
-
-
 ### User
 
 - Client Database 
 - Stores client name, card number, accounts' num/balance, login status, login fail count(s)
 
-### addRegisteredUser
+### importClientInfo
 
-- Allow client database to store some client info
-- Provide test-case environment
+- Read in `clientDB.txt` and store clients' information in User 
+
+### exportClientInfo
+
+- Stores clients' information by exporting User databse in `clientDB.txt` file
