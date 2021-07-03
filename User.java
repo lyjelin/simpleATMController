@@ -7,7 +7,7 @@ public class User {
     private ArrayList<String> hashedPin;
     private ArrayList<String> accNum;
     private ArrayList<Integer> accBalance;
-    private ArrayList<Boolean> loginStatus;
+    private ArrayList<Boolean> accStatus;
     private ArrayList<Integer> loginFailCount;
 
     public User(){
@@ -16,7 +16,7 @@ public class User {
         hashedPin = new ArrayList<String>();
         accNum = new ArrayList<String>();
         accBalance = new ArrayList<Integer>();
-        loginStatus = new ArrayList<Boolean>();
+        accStatus = new ArrayList<Boolean>();
         loginFailCount = new ArrayList<Integer>();
     }
 
@@ -63,6 +63,10 @@ public class User {
         return hashedPin.get(index);
     }
 
+    public String gethashedPin(String cardHolderName) {
+        return hashedPin.get(name.indexOf(cardHolderName));
+    }
+
     public int hashedPinArraySize() {
         return hashedPin.size();
     }
@@ -105,21 +109,21 @@ public class User {
         accBalance.set(index, balance);
     }
 
-    // loginStatus handlings
-    public void addLoginStatus(boolean status) {
-        loginStatus.add(status);
+    // accStatus handlings
+    public void addAccStatus(boolean status) {
+        accStatus.add(status);
     }
 
-    public String getLoginStatus(int index) {
-        return accNum.get(index);
+    public boolean checkAccStatus(String cardHolderName) {
+        return accStatus.get(name.indexOf(cardHolderName));
     }
 
-    public int loginStatusArraySize() {
-        return loginStatus.size();
+    public int accStatusArraySize() {
+        return accStatus.size();
     }
 
-    public void changeLoginStatus(int index, boolean userStatus)  {
-        loginStatus.set(index, userStatus);
+    public void changeAccStatus(int index, boolean userStatus)  {
+        accStatus.set(index, userStatus);
     }
 
     // loginFailCount handlings
@@ -127,16 +131,21 @@ public class User {
         loginFailCount.add(balance);
     }
 
-    public int getLoginFailCount(int index) {
-        return loginFailCount.get(index);
+    public int getLoginFailCount(String cardHolderName) {
+        return loginFailCount.get(name.indexOf(cardHolderName));
     }
 
     public int LoginFailCountArraySize() {
         return loginFailCount.size();
     }
 
-    public void changeLoginFailCount(int index, int balance)  {
-        loginFailCount.set(index, balance);
+    public void failCountUp(int index)  {
+        int currentFailCount = loginFailCount.get(index);
+        loginFailCount.set(index, currentFailCount++);
+    }
+
+    public void resetCount(int index){
+        loginFailCount.set(index, 0);
     }
 
 

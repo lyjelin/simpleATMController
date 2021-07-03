@@ -21,6 +21,15 @@ public class HashAlgo implements Hashing {
         generatePin = sb.toString();
 
         return generatePin;
-    
+    }
+
+    public boolean checkUserExistance(User u, String pinNumber){
+        boolean exist = false;
+
+        for (int i=0; i<u.hashedPinArraySize(); i++){
+            if (pinNumber == u.gethashedPin(i)) exist = true;
+        }
+        
+        return exist;
     }
 }

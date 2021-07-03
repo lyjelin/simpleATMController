@@ -11,3 +11,7 @@ Implementing a Simple ATM Controller
 For simplification, there are only 1 dollar bills in this world, no cents. 
 
 Thus account balance can be represented in integer.
+
+----
+
+Insert Card as **Enter Card Number** 
