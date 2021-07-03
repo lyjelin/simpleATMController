@@ -49,7 +49,9 @@ public class ATM {
             int clientAccIndex = Integer.parseInt(clientInput);
 
             System.out.println("");
+            System.out.println("=======================");
             System.out.println("Selected Account : "+(user.getAcc()).get(clientNum).get(clientAccIndex));
+            System.out.println("=======================");
 
             /**
              * Transaction Page
@@ -96,7 +98,6 @@ public class ATM {
 
         }
 
-    
     }
 
     public static String Now(){

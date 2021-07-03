@@ -8,16 +8,15 @@ public class exportClientInto {
         String clientInfo = "";
 
         for (int i=0;i<u.nameArraySize();i++){
-            clientInfo = 
-                u.getName(i)+";"+u.getCardNum(i)
-                + ";"+u.gethashedPin(i)+";";
-            if (u.getAcc().get(i).size()>1){
-                for (int j=0;j<u.getAcc().size();j++){
-                    if (j!=u.getAcc().size()-1){
-                        clientInfo += u.getAcc().get(j)+",";
+            clientInfo = u.getName(i)+";"+u.getCardNum(i)+ ";"+u.gethashedPin(i)+";";
+
+            if (u.getAccNumArray(i).size()>1){
+                for (int j=0;j<u.getAccNumArray(i).size();j++){
+                    if (j!=u.getAccNumArray(i).size()-1){
+                        clientInfo += u.getAccNumArray(i).get(j)+",";
                     }
                     else {
-                        clientInfo += u.getAcc().get(j);
+                        clientInfo += u.getAccNumArray(i).get(j);
                     }
                 }
             }

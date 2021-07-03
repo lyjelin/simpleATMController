@@ -1,11 +1,9 @@
 import java.io.*;
 import java.security.*;
 
-public class Deposit extends Service {
+public class Deposit {
 
-    @Override
-    public void func(BufferedReader input, User u, int clientAccIndex, int clientNum) throws IOException, NoSuchAlgorithmException {
-        super.func(input, u, clientAccIndex, clientNum);
+    public static void func(BufferedReader input, User u, int clientAccIndex, int clientNum) throws IOException, NoSuchAlgorithmException {
         
         System.out.println("");
         System.out.println("Enter amount for cash deposit : ");
@@ -19,8 +17,8 @@ public class Deposit extends Service {
         String confirmation = input.readLine();
         boolean flag = true;
 
-        while(flag){
-            if (confirmation == "Y" || confirmation == "y"){
+        while(flag == true){
+            if (confirmation.equals("Y") || confirmation.equals("y")){
                 int currentBalance = u.getAccBalance(clientNum).get(clientAccIndex);
                 u.getAccBalance(clientNum).set(clientAccIndex, currentBalance + Integer.parseInt(amount));
                 System.out.println("");
@@ -30,15 +28,18 @@ public class Deposit extends Service {
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;
             }
-            else if (confirmation == "N" || confirmation == "n"){
+            else if (confirmation.equals("N") || confirmation.equals("n")){
                 System.out.println("Cash Deposit Cancelled");
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;
     
             }
             else {
+                System.out.println("");
+                System.out.println("=======================");
                 System.out.println("Invalid input");
                 System.out.println("Please enter either Y or N");
+                confirmation = input.readLine();
 
             }
 
