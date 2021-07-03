@@ -19,8 +19,8 @@ public class addRegisteredUser extends HashAlgo {
         bearAccBalance.add(200000);
 
         u.addName("BEAR");
-        u.addCardNum("0000000000000000");
-        u.addhashedPin(hashedPin("robotics2017"));
+        u.addCardNum("000000");
+        u.addhashedPin(hashedPin("2017"));
         u.addAccNum(bearAcc);
         u.addAccBalance(bearAccBalance);
         u.addLoginStatus(true);
@@ -38,8 +38,8 @@ public class addRegisteredUser extends HashAlgo {
         elinAccBalance.add(999999);
 
         u.addName("Elin");
-        u.addCardNum("0000000000000001");
-        u.addhashedPin(hashedPin("helloworld"));
+        u.addCardNum("000001");
+        u.addhashedPin(hashedPin("1999"));
         u.addAccNum(elinAcc);
         u.addAccBalance(elinAccBalance);
         u.addLoginStatus(true);
@@ -57,8 +57,8 @@ public class addRegisteredUser extends HashAlgo {
         pandaAccBalance.add(123905);
 
         u.addName("Panda");
-        u.addCardNum("0000000000000002");
-        u.addhashedPin(hashedPin("bamb00"));
+        u.addCardNum("000002");
+        u.addhashedPin(hashedPin("6606"));
         u.addAccNum(pandaAcc);
         u.addAccBalance(pandaAccBalance);
         u.addLoginStatus(true);
@@ -76,8 +76,8 @@ public class addRegisteredUser extends HashAlgo {
         polarAccBalance.add(456730);
 
         u.addName("Polar");
-        u.addCardNum("0000000000000003");
-        u.addhashedPin(hashedPin("12345!!"));
+        u.addCardNum("000003");
+        u.addhashedPin(hashedPin("1234"));
         u.addAccNum(polarAcc);
         u.addAccBalance(polarAccBalance);
         u.addLoginStatus(true);
@@ -95,8 +95,8 @@ public class addRegisteredUser extends HashAlgo {
         poohAccBalance.add(750000);
 
         u.addName("Pooh");
-        u.addCardNum("0000000000000004");
-        u.addhashedPin(hashedPin("honey33"));
+        u.addCardNum("000004");
+        u.addhashedPin(hashedPin("3333"));
         u.addAccNum(poohAcc);
         u.addAccBalance(poohAccBalance);
         u.addLoginStatus(true);

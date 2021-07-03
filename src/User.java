@@ -37,10 +37,6 @@ public class User {
         return name.indexOf(cardHolderName);
     }
 
-    public int getUserIndexByCardNum(String cardNum)  {
-        return name.indexOf(cardNum);
-    }
-
     // cardNum handlings
     public void addCardNum(String cardNumber) {
         cardNum.add(cardNumber);
@@ -79,6 +75,10 @@ public class User {
         return hashedPin.indexOf(cardNumber);
     }
 
+    public ArrayList<String> getHashedPinArray(){
+        return hashedPin;
+    }
+
     // accNum handlings
     public void addAccNum(ArrayList<String> accNumbers) {
         accNum.add(accNumbers);
@@ -94,6 +94,10 @@ public class User {
 
     public int getAccHolderIndex(ArrayList<String> acc)  {
         return accNum.indexOf(acc);
+    }
+
+    public ArrayList<ArrayList<String>> getAcc(){
+        return accNum;
     }
 
     // accBalance handlings

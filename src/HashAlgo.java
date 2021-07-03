@@ -3,6 +3,14 @@ import java.security.*;
 public class HashAlgo implements Hashing {
 
     public HashAlgo(){}
+    
+    @Override
+    public boolean checkPinNum(User u, String pinNum) throws NoSuchAlgorithmException {
+        for (String x : u.getHashedPinArray()){
+            if (hashedPin(pinNum) == x) return true;
+        }
+        return false;
+    }
 
     public String hashedPin (String plainPin) throws NoSuchAlgorithmException {
         String generatePin = null;
@@ -22,13 +30,6 @@ public class HashAlgo implements Hashing {
         return generatePin;
     }
 
-    public boolean checkUserExistance(User u, String pinNumber){
-        boolean exist = false;
 
-        for (int i=0; i<u.hashedPinArraySize(); i++){
-            if (pinNumber == u.gethashedPin(i)) exist = true;
-        }
-        
-        return exist;
-    }
+
 }
