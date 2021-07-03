@@ -21,7 +21,7 @@ public class ATM {
         setting.database(user);
         
 
-        System.out.println("Today is "+Now());
+        System.out.println("Today is " + Now());
         System.out.println("Please insert your card");
 
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
@@ -33,6 +33,24 @@ public class ATM {
 
             int clientNum = user.getUserIndexByCardNum(cardNumber);
 
+            /**
+             * Account Selection Page
+             */
+            System.out.println("Select Account for Service");
+            ArrayList<String> clientAccList = user.getAccNumArray(clientNum);
+
+            int num = 1;
+            for (String acc : clientAccList){
+                System.out.println(num + ": "+acc);
+                num++;
+            }
+
+            String clientInput = input.readLine();
+            String clientAccIndex = clientAccList.get(Integer.parseInt(clientInput));
+
+            /**
+             * Transaction Page
+             */
             System.out.println("");
             System.out.println(" Select Transaction");
             System.out.println("---------------------");
@@ -51,11 +69,10 @@ public class ATM {
                     user.getAccBalance(clientNum);
 
                 else if (command.equals("2"))
-                    deposit.func(input, user, cardNumber);
-                    
-                else if (command.equals("3"))
-                    withdrawal.func(input, user, cardNumber);
+                    deposit.func(input, user, clientAccIndex, clientNum);
 
+                else if (command.equals("3"))
+                    withdrawal.func(input, user, clientAccIndex, clientNum);
             }
 
             System.out.println("Please remember to retrieve your card");

@@ -1,13 +1,14 @@
 import java.io.*;
-import java.security.NoSuchAlgorithmException;
+import java.security.*;
 
 public class Deposit extends Service {
 
     @Override
-    public void func(BufferedReader input, User u, String cardNum) throws IOException, NoSuchAlgorithmException {
-        super.func(input, u, cardNum);
+    public void func(BufferedReader input, User u, String clientAccIndex, int clientNum)
+            throws IOException, NoSuchAlgorithmException {
+        // TODO Auto-generated method stub
+        super.func(input, u, clientAccIndex, clientNum);
 
-        System.out.println("");
+        
     }
-    
 }
