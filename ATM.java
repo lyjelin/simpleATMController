@@ -6,13 +6,20 @@ import java.util.*;
 import java.text.SimpleDateFormat;
 
 public class ATM {
-    
+
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         
         User user = new User();
         Deposit deposit = new Deposit();
         Withdrawal withdrawal = new Withdrawal();
         authPinNum authentication = new authPinNum();
+
+        /**
+         * Registered User Settings
+         */
+        addRegisteredUser setting = new addRegisteredUser();
+        setting.database(user);
+        
 
         System.out.println("Today is "+Now());
         System.out.println("Please insert your card");
@@ -65,5 +72,5 @@ public class ATM {
         
         return timeStamp;
     }
-    
+
 }
