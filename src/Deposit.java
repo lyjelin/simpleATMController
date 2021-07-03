@@ -24,7 +24,8 @@ public class Deposit extends Service {
                 int currentBalance = u.getAccBalance(clientNum).get(clientAccIndex);
                 u.getAccBalance(clientNum).set(clientAccIndex, currentBalance + Integer.parseInt(amount));
                 System.out.println("");
-                System.out.println(currentBalance + Integer.parseInt(amount)+" added into your account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
+                System.out.println(Integer.parseInt(amount)+" added into your account ["+u.getAcc().get(clientNum).get(clientAccIndex)+"] successfully");
+                System.out.println("Current Balance : "+ (currentBalance + Integer.parseInt(amount)));
                 System.out.println("");
                 System.out.println("Returning back to Transaction Main ...");
                 flag = false;
@@ -44,10 +45,6 @@ public class Deposit extends Service {
         }
 
         return;
-
-
-
-
         
     }
 }

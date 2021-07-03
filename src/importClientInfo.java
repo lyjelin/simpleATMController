@@ -2,14 +2,14 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.io.*;
 
-public class addRegisteredUser extends HashAlgo {
+public class importClientInfo extends HashAlgo {
 
-    public addRegisteredUser(){}
+    public importClientInfo(){}
 
     public void database(User u) throws NoSuchAlgorithmException, IOException {
 
-        File clientIntoFile = new File("clientDB.txt");
-        FileReader fr = new FileReader(clientIntoFile);
+        File clientInfoFile = new File("clientDB.txt");
+        FileReader fr = new FileReader(clientInfoFile);
         BufferedReader br = new BufferedReader(fr);
 
         String clientInfo;
@@ -17,11 +17,12 @@ public class addRegisteredUser extends HashAlgo {
         while ((clientInfo = br.readLine())!=null){
             String[] tempArray = clientInfo.split(";");
 
-            ArrayList<String> acc= new ArrayList<String>();
+            ArrayList<String> acc = new ArrayList<String>();
             ArrayList<Integer> accBalance= new ArrayList<Integer>();
 
             u.addName(tempArray[0]);
             u.addCardNum(tempArray[1]);
+            u.addhashedPin(hashedPin(tempArray[2]));
 
             String[] accHoldByClient = (tempArray[3]).split(",");
             String[] eachAccBalance = (tempArray[4]).split(",");

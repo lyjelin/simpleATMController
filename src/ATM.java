@@ -17,7 +17,7 @@ public class ATM {
         /**
          * Registered User Settings
          */
-        addRegisteredUser setting = new addRegisteredUser();
+        importClientInfo setting = new importClientInfo();
         setting.database(user);
 
         System.out.println("=======================");
@@ -90,6 +90,9 @@ public class ATM {
             System.out.println("");
             System.out.println("Please remember to retrieve your card");
             System.out.println("Thank you for using");
+
+            exportClientInto clientDB = new exportClientInto();
+            clientDB.save(user);
 
         }
 

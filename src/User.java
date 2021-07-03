@@ -122,6 +122,10 @@ public class User {
         return loginStatus.get(name.indexOf(cardHolderName));
     }
 
+    public String getLoginStatus(int index) {
+        return String.valueOf(loginStatus.get(index));
+    }
+
     public int loginStatusArraySize() {
         return loginStatus.size();
     }
@@ -137,6 +141,10 @@ public class User {
 
     public int getLoginFailCount(String cardHolderName) {
         return loginFailCount.get(name.indexOf(cardHolderName));
+    }
+
+    public String getLoginFailCountByIndex(int index) {
+        return Integer.toString(loginFailCount.get(index));
     }
 
     public int LoginFailCountArraySize() {
