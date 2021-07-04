@@ -35,10 +35,10 @@ Assuming that your visual code has Java extentions, click `Run` button that you 
 3. If pin number is invalid, the Authentication fails. The ATM system will allow client to re-enter valid pin number for 2 more times (3 times in total). If the client fails to type in correct pin for all given chances, client's card will be locked. But if user success to enter valid pin number within given chances, the login fail count will reset to zero
 <img src="/img/loginFail.png" alt="loginFail" width="50%"/>
 4. If pin number is correct Authentication will be successful and show account selection page. 
-<img src="/img/transactionPage.png" alt="tp" width="50%"/>
 5. Client can select account from list of Accounts
 <img src="/img/selectAcc.png" alt="selectAcc" width="50%"/>
 6. After selection, the transaction screen will be coming out. Client can :
+<img src="/img/transactionPage.png" alt="tp" width="50%"/>
 
 **Check Balance**
 <img src="/img/showBalance.png" alt="showBalance" width="50%"/>
@@ -51,6 +51,14 @@ Assuming that your visual code has Java extentions, click `Run` button that you 
 
 7. Client can only exit ATM service and terminate by selecting [4]
 <img src="/img/exit.png" alt="exit" width="50%"/>
+
+---
+
+## Sample Video
+
+<video width="320" height="240" controls>
+  <source src="sampleVideo1.mov" type="video/quicktime">
+</video>
 
 ---
 ## Functions
