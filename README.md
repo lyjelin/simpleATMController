@@ -57,7 +57,7 @@ Assuming that your visual code has Java extentions, click `Run` button that you 
 ## Sample Video
 
 <video width="320" height="240" controls>
-  <source src="sampleVideo1.mov" type="video/quicktime">
+  <source src="/video/sampleVideo1.mov" type="video/quicktime">
 </video>
 
 ---
